@@ -9,14 +9,17 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   # Other way
-  # collection do
-  #   get :top
-  # end
 
-  # member do
-  #   get :review
-  # end
+  # resources :restaurants do
+  #   resources :reviews, only: [:new, :create]
+  #   collection do
+  #     get :top
+  #   end
 
+  #   member do
+  #     get :review
+  #   end
+  # end
 
   # Read all
   get "/restaurants", to: "restaurants#index"
@@ -26,7 +29,10 @@ Rails.application.routes.draw do
   # Read one
   get "/restaurants/:id", to: "restaurants#show"
 
+  # Read all - Nested
+  get "/restaurants/:restaurant_id/reviews", to: "reviews#index"
+
   # Create - Nested
-  get "/restaurants/:id/reviews/new", to: "reviews#new"
-  post "/restaurants/:id/reviews", to: "reviews#create"
+  get "/restaurants/:restaurant_id/reviews/new", to: "reviews#new"
+  post "/restaurants/:restaurant_id/reviews", to: "reviews#create"
 end
