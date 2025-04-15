@@ -15,7 +15,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_04_08_234846) do
     t.string "name", null: false
     t.string "address", null: false
     t.string "phone_number"
-    t.integer "category", null: false
+    t.string "category", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

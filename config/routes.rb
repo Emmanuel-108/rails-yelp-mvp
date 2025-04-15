@@ -27,7 +27,7 @@ Rails.application.routes.draw do
   get "/restaurants/new", to: "restaurants#new"
   post "/restaurants", to: "restaurants#create"
   # Read one
-  get "/restaurants/:id", to: "restaurants#show"
+  get "/restaurants/:id", to: "restaurants#show", as: :restaurant
 
   # Read all - Nested
   get "/restaurants/:restaurant_id/reviews", to: "reviews#index"
