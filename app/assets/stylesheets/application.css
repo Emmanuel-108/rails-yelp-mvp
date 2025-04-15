@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+
+ .frame {
+  padding: 25px;
+ }
+
+ .ui-box {
+  width: 300px;
+ }
+
+ .no-underline {
+  text-decoration: none;
+  color: black;
+ }

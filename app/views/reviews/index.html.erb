@@ -1,1 +1,9 @@
-<h1>All Reviews</h1>
+<div class="frame">
+  <h1><%= @restaurant.name %> Reviews</h1>
+
+  <% @reviews.each do |review| %>
+    <li><%= review.rating %> | <%= review.content %></li>
+  <% end %>
+  <hr>
+  <%= link_to "Return to Restaurant View", restaurant_path(@restaurant), class:"no-underline" %>
+</div>

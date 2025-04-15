@@ -1,5 +1,9 @@
-<h1>Restaurants</h1>
+<div class="frame">
+  <h1>Restaurants</h1>
 
-<% @restaurants.each do |restaurant| %>
-  <li><%= restaurant.name %></li>
-<% end %>
+  <% @restaurants.each do |restaurant| %>
+    <li><%= link_to restaurant.name, restaurant_path(restaurant) %> | <%= restaurant.address %></li>
+  <% end %>
+  <hr>
+  <%= link_to "Register Restaurant", restaurants_new_path, class:"no-underline" %>
+</div>

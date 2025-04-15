@@ -1,1 +1,9 @@
-<h1>Restaurant id</h1>
+<div class="frame">
+  <%= link_to "Leave a Review", review_new_path(@restaurant), class:"no-underline" %>
+  <%= link_to "View Reviews", reviews_path(@restaurant), class:"no-underline" %>
+  <h1>Restaurant Details</h1>
+
+  <li><%= @restaurant.name %> | <%= @restaurant.address %> | <%= @restaurant.phone_number %> | <%= @restaurant.category.capitalize %></li>
+  <hr>
+  <%= link_to "Return to List of Restaurants", restaurants_path, class:"no-underline" %>
+</div>
